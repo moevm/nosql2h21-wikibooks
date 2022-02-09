@@ -14,15 +14,32 @@
 </div>
 
 <div class="w3-main" style="margin-left:auto">
-
     <div class="w3-teal" style="height: 40px">
         <a href = "/nosql2h21-wikibooks/stats.html" style="margin-right: 20px; float: right">Stats</a>
         <a href = "/nosql2h21-wikibooks/auth.html" style="margin-right: 20px; float: right">Sign in</a>
     </div>
 </div>
 
+<input type="file" id="your-files" multiple style="margin-left: 220px">
+
 
 <script>
+
+    var control = document.getElementById("your-files");
+    control.addEventListener("change", function(event) {
+
+        var i = 0,
+            files = control.files,
+            len = files.length;
+
+        for (; i < len; i++) {
+            console.log("Filename: " + files[i].name);
+            console.log("Type: " + files[i].type);
+            console.log("Size: " + files[i].size + " bytes");
+        }
+
+    }, false);
+
     function w3_open() {
         document.getElementById("mySidebar").style.display = "block";
     }
