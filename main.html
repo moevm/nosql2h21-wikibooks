@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>Wikibooks mirror</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body style="background-color:#E5E5E5">
@@ -9,16 +9,16 @@
     <button class="w3-bar-item w3-button w3-hide-large"
             onclick="w3_close()">Close &times;</button>
     <a href="/"><img src="logo.jpg" width="200" height="160"></a>
-    <a href="/import" class="w3-bar-item w3-button">Импорт</a>
-    <a href="/export" class="w3-bar-item w3-button">Экспорт</a>
+    <a href="/import" class="w3-bar-item w3-button">Import</a>
+    <a href="/export" class="w3-bar-item w3-button">Export</a>
 </div>
 
-<div class="w3-main" style="margin-left:200px">
+<div class="w3-main" style="margin-left:auto">
 
-    <div class="w3-teal">
-        <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-        <a href = "/stats" style="margin-right: 1100px">Статистика</a>
-        <a href = "/login" style="margin-right: auto">Войти</a>
+    <div class="w3-teal" style="height: 40px">
+
+        <a href = "/stats" style="margin-right: 20px; float: right">Stats</a>
+        <a href = "/auth" style="margin-right: 20px; float: right">Sign in</a>
     </div>
 </div>
 
@@ -32,5 +32,7 @@
         document.getElementById("mySidebar").style.display = "none";
     }
 </script>
+
+</body>
 
 </html>
