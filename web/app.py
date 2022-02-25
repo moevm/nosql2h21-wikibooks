@@ -77,31 +77,6 @@ def auth():
 def stats():
     return render_template('stats.html')
 
-
-
-#TODO
-# Не работает, так как криво определяется путь до директории
-
-# @app.route('/<string:title>')
-# def mirrorPage(title, lang):
-#     if request.method == "POST":
-#         data = db.get_book(lang)
-
-#         for el in data:
-#           if el.get('a.title') == title:
-#             match_data = el.get('a.html')
-#             f_name = str(title) + '.html'
-#            # directory = os.getcwd()
-#
-#             fo = open(r"C:\Users\nosql2h21-wikibooks\\" + "templates" + f_name, 'w')
-#             fo.write(match_data)
-#             fo.close()
-#             print(match_data)
-#             return render_template(match_data)
-#           else:
-#             print('error')
-
-
 if __name__ == "__main__":
     app.run(debug=True)
 

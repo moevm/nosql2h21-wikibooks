@@ -7,11 +7,6 @@ class DBMS:
     def close(self):
         self.driver.close()
 
-    def _make_query(self, query):
-        with self.driver.session() as session:
-            result = session.run(query)
-            return result.data()
-
     def add_book(self, lang):
         query = "LOAD CSV WITH HEADERS from \'file:///" + lang + ".csv\' as row with row where row.title is not null MERGE(b:Wikibook {title: row.title, url: row.url,html: row.body_html, message: \"" + lang + "\"}) RETURN b"
         res = self._make_query(query)
@@ -45,3 +40,8 @@ class DBMS:
     def DELETE_NODES(self):
         query = "MATCH (n) DELETE n"
         return self._make_query(query)
+
+    def _make_query(self, query):
+        with self.driver.session() as session:
+            result = session.run(query)
+            return result.data()
